@@ -21,12 +21,12 @@ num1 = 0 #first number of sum/product
 num2 = 0 #second number of sum/product
 num3 = 0 #third number of sum/product
 for x in range(len(entries)):
-    for y in range(len(entries)):
-        for z in range(len(entries)):
-            if ((entries[x] + entries[y] + entries[z]) == 2020):
+    for y in range(len(entries) - 1):
+        for z in range(len(entries) - 2):
+            if ((entries[x] + entries[(y+1)] + entries[(z+2)]) == 2020):
                 num1 = entries[x]
-                num2 = entries[y]
-                num3 = entries[z]
+                num2 = entries[(y+1)]
+                num3 = entries[(z+2)]
                 break
         if(num1 > 0): break
     if (num1 > 0): break
